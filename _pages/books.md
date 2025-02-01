@@ -21,7 +21,7 @@ permalink: /books/
         <h2><a href="{{ site.baseurl }}{{ book.url }}" class="item-title internal-link">{{ book.title }}</a></h2>
         <p>by 
           {% for person in book.people %}
-            <a href="/people/{{ person | downcase | replace: ' ', '-' }}" class="internal-link">{{ person }}</a>{% if forloop.last != true %}, {% endif %}
+            <a href="/people/{{ person | downcase | replace: ' ', '-' }}" class="internal-link">{{ person | remove: "[[" | remove: "]]" }}</a>{% if forloop.last != true %}, {% endif %}
           {% endfor %}
         </p>
         <div class="item-tag-wrap">

@@ -2,7 +2,7 @@
 title: Women, Race and Class
 date: 2025-01-26
 people: "[[Angela Y Davis]]"
-tags: [books]
+tags: [books, womanism, race]
 permalink: /people/women-race-and-class/
 cover_image: /assets/image.jpg
 ---
