@@ -676,6 +676,7 @@ text-transform: uppercase;
 
   h2 {
     color: #000;
+    margin-block-start: auto !important;
 
 font-family: 'Redaction Regular';
 font-size: 1.5rem;
@@ -683,6 +684,10 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 letter-spacing: -0.045rem;
+a {
+color: black !important;
+text-decoration: none;
+}
   }
 
   p {
