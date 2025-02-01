@@ -30,7 +30,8 @@ module Jekyll
         @name = "#{tag}.html"
   
         self.process(@name)
-        self.read_yaml(File.join(base, '_layouts'), 'tag.html')
+        # Changed 'tag.html' to 'tags.html' to match your layout file name
+        self.read_yaml(File.join(base, '_layouts'), 'tags.html')
         self.data['title'] = "Tagged: #{tag}"
         self.data['tag'] = tag
       end

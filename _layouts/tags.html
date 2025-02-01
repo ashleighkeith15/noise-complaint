@@ -2,14 +2,17 @@
 layout: default
 ---
 
-<h1>Tagged: {{ page.tag }}</h1>
+<article>
+  <div>
+    <h1>{{ page.tag }}</h1>
 
-<ul>
-  {% for note in site.notes %}
-    {% if note.tags contains page.tag %}
-      <li>
-        <a href="{{ note.url }}">{{ note.title }}</a>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
+    <div style="margin-top: 2rem;">
+      {% assign tagged_notes = site.notes | where_exp: "note", "note.tags contains page.tag" %}
+      {% for note in tagged_notes %}
+        <div style="margin-bottom: 1rem;">
+          <a href="{{ note.url }}">{{ note.title }}</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</article>
