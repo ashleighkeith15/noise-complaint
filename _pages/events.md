@@ -3,7 +3,7 @@ layout: default
 title: Events
 header_title: Events
 header_excerpt: A collection of finished pieces on various topics, and bullshit.
-permalink: /unfinished-threads/
+permalink: /events/
 ---
 
 
