@@ -7,7 +7,7 @@ permalink: /books/
 ---
 
 
-  <div class="books_contain">
+   <div class="books_contain">
     {% assign book_files = site.notes | where_exp: "note", "note.path contains '/books/'" %}
     {% for book in book_files %}
       <div class="book-item">
@@ -34,3 +34,4 @@ permalink: /books/
       </div>
     {% endfor %}
   </div>
+</div>

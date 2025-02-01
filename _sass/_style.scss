@@ -558,7 +558,7 @@ border-bottom: 1px solid #ccc;
 }
 
 .item-tag-wrap {
-  width: 50%;
+  width: 100%;
   margin-bottom: 2em;
 }
 
@@ -744,4 +744,8 @@ text-decoration: none;
 .book-item:hover {
   background-color: $color-accent;
   color: white;
+
+  .item-title, p, h2 {
+    color: white;
+  }
 }
