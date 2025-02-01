@@ -116,7 +116,7 @@ blockquote {
   margin: 0;
   font-size: 0.88em;
   background: white;
-  border-left: 2px dashed red;
+  border-left: 2px dashed #1E8D25;
   background-color: #fff;
   padding: 0.3125rem 0.625rem;
 
@@ -163,7 +163,7 @@ h6 {
 
 
 .internal-link {
-  color: red;
+  color: #1E8D25;
   font-family: 'Satoshi Bold';
 }
 
@@ -298,7 +298,7 @@ height: 5.8125rem;
 }
 
 .blockquote {
-  border-left: 2px dashed red;
+  border-left: 2px dashed #1E8D25;
   background-color: #fff;
   padding-left: .62rem;
 }
@@ -317,7 +317,7 @@ height: 5.8125rem;
 .button:hover {
   transition: background 300ms;
   color: white !important;
-  background: red;
+  background: #1E8D25;
 
 }
 
@@ -352,8 +352,9 @@ z-index: 5;
 }
 
 
-.footer-border-wrap {
+.footer-border {
   display: flex;
+  background: url('assets/border green.png') lightgray 0% 0% / 97.00000286102295px 97.00000286102295px repeat;
 }
 
 .footer-border-image {
@@ -587,12 +588,17 @@ border-bottom: 1px solid #ccc;
 }
 
 .item-tag {
-  background-color: var(--swatch--primary);
-  color: var(--swatch--white);
+  background-color: #1E8D25;
+  color: white;
   text-transform: uppercase;
   border-radius: 8px;
   padding: 4px 7px;
   display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-family: 'Satoshi Bold';
 }
 
 .item-content {
@@ -684,8 +690,7 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 letter-spacing: -0.045rem;
-a {
-}
+
   }
 
   p {
