@@ -1,12 +1,14 @@
 ---
 title: Women, Race and Class
 date: 2025-01-26
+people: "[[Angela Y Davis]]"
 tags: [books]
 ---
 
 Angela Y. Davis
 PDF link: Women, Race, & Class by Angela Y. Davis : Free Download, Borrow, and Streaming : Internet Archive
 The legacy of slavery: standards for a new womanhood
+
 In the early days of slavery, around the early 1900s, many scholars thought that they understood the complexities of slavery and chose to write about the "peculiar institution". Ulrich B. Phillips declared that slavery gave civilization to the the African savages. Many of those scholars failed to expand on the particular situations and complexities of being a female slave.
 Herbert Gutman attempted to exlore this in his investigation of the Black family. He believed that not much made them different from their white counterparts if only that Black women's domestic aspirations were thwarted by slavery.
 Since scholars have not done a deep enough analysis of the black female slaves and all they faced, Davis proposes some of her own ideas to guide the reexamination of the history of black women during slavery.
