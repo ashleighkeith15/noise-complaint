@@ -22,4 +22,3 @@ permalink: /people/
       </div>
     {% endfor %}
   </div>
-</div>

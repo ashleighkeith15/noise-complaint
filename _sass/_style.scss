@@ -551,6 +551,8 @@ border-bottom: 1px solid #ccc;
 
 .item-excerpt {
   flex: 1;
+  margin-block-start: auto !important;
+  margin-block-end: auto !important;
 
   p {
     margin-block-start: 0em !important;
@@ -559,7 +561,7 @@ border-bottom: 1px solid #ccc;
 
 .item-tag-wrap {
   width: 100%;
-  margin-bottom: 2em;
+  margin-bottom: 1.2em;
 }
 
 .item-tag, .filter-button {
