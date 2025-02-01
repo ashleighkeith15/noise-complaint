@@ -1,33 +1,32 @@
 ---
-layout: page
-title: Home
+layout: default
+title: Noise Complaint
 id: home
 permalink: /
+header_title: Noise Complaint
+header_excerpt: A collection of finished pieces on various topics, and bullshit.
 ---
+<div class="item-wrap">
+{% assign article_files = site.notes | where_exp: "note", "note.path contains '/articles/'" %}
+{% for article in article_files %}
+  <div class="item-contain">
+    {% if article.tags %}
+      <div class="item-tag-wrap">
+        {% for tag in article.tags %}
+          <a href="#" class="item-tag">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    
+    <div class="item-content">
+      <div class="title-wrap">
+        <h1 class="item-title">
+          <a href="{{ site.baseurl }}{{ article.url }}" class="internal-link">{{ article.title }}</a>
+        </h1>
+      </div>
+      <p class="item-excerpt">{{ article.excerpt | strip_html | truncatewords: 30 }}</p>
+    </div>
+  </div>
+{% endfor %}
+</div>
 
-# Welcome! 🌱
-
-<p style="padding: 3em 1em; background: #f5f7ff; border-radius: 4px;">
-  Take a look at <span style="font-weight: bold">[[Your first note]]</span> to get started on your exploration.
-</p>
-
-This digital garden template is free, open-source, and [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
-
-The easiest way to get started is to read this [step-by-step guide explaining how to set this up from scratch](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll).
-
-<strong>Recently updated notes</strong>
-
-<ul>
-  {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
-  {% for note in recent_notes limit: 5 %}
-    <li>
-      {{ note.last_modified_at | date: "%Y-%m-%d" }} — <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
-<style>
-  .wrapper {
-    max-width: 46em;
-  }
-</style>
