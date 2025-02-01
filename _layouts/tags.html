@@ -2,26 +2,16 @@
 layout: default
 ---
 
-<div class="item-wrap">
-  {% assign tagged_notes = site.notes | where_exp: "note", "note.tags contains page.tag" %}
-  {% for note in tagged_notes %}
-    <div class="item-contain">
-      {% if note.tags %}
-        <div class="item-tag-wrap">
-          {% for tag in note.tags %}
-            <a href="/tags/{{ tag }}" class="item-tag">{{ tag }}</a>
-          {% endfor %}
+
+  <div>
+    <h1>{{ page.tag }}</h1>
+
+    <div style="margin-top: 2rem;">
+      {% assign tagged_notes = site.notes | where_exp: "note", "note.tags contains page.tag" %}
+      {% for note in tagged_notes %}
+        <div style="margin-bottom: 1rem;">
+          <a href="{{ note.url }}">{{ note.title }}</a>
         </div>
-      {% endif %}
-      
-      <div class="item-content">
-        <div class="title-wrap">
-          <h2 class="item-title">
-            <a href="{{ site.baseurl }}{{ note.url }}" class="internal-link">{{ note.title }}</a>
-          </h2>
-        </div>
-        <p class="item-excerpt">{{ note.excerpt | strip_html | truncatewords: 30 }}</p>
-      </div>
+      {% endfor %}
     </div>
-  {% endfor %}
-</div>
+  </div>
