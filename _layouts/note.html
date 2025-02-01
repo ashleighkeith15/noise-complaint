@@ -7,19 +7,12 @@ layout: default
   <div class="note-content-wrap">
     <h1>{{ page.title }}</h1>
     <div class="metadata-container">
-      {% if page.title %}
-      <div class="metadata-line">
-        <span class="key">title</span>
-        <span class="colon">:</span>
-        <span class="value">{{ page.title }}</span>
-      </div>
-      {% endif %}
-      
+     
       {% if page.people %}
       <div class="metadata-line">
         <span class="key">people</span>
         <span class="colon">:</span>
-        <a href="{{ page.people | remove: '[[' | remove: ']]' | prepend: '/people/' | append: '.html' }}" class="people-link">
+        <a href="/people/{{ page.people | remove: '[[' | remove: ']]' | downcase | replace: ' ', '-' }}" class="people-link">
           {{ page.people | remove: '[[' | remove: ']]' }}
         </a>
       </div>
@@ -35,6 +28,7 @@ layout: default
       </div>
       {% endif %}
     </div>
+    
     <p class="item-excerpt">{{ content }}</p>
     <hr>
 
