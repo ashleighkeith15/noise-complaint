@@ -565,12 +565,12 @@ border-bottom: 1px solid #ccc;
 .nav-link-contain {
   border-bottom: 1px solid #000;
   justify-content: space-between;
-  padding: .95em;
+  padding: .5em;
   display: flex;
 }
 
 .nav-link-wrap {
-  grid-column-gap: 2.75em;
+  grid-column-gap: 0.75em;
   grid-row-gap: 2.75em;
   display: flex;
 }
