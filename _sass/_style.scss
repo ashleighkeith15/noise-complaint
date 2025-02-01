@@ -11,56 +11,56 @@ $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
 
   @font-face {
     font-family: 'Redaction Regular';
-    src: url('assets/Redaction-Regular.woff2') format('woff2');
+    src: url('/assets/Redaction-Regular.woff2') format('woff2');
     font-display:swap;
   }
 
   @font-face {
     font-family: 'Redaction Bold';
-    src: url('assets/Redaction-Bold.woff2') format('woff2');
+    src: url('/assets/Redaction-Bold.woff2') format('woff2');
     font-display:swap;
   }
 
   @font-face {
     font-family: 'Redaction Italic';
-    src: url('assets/Redaction-Italic.woff2') format('woff2');
+    src: url('/assets/Redaction-Italic.woff2') format('woff2');
     font-display:swap;
   }
 
   @font-face {
     font-family: 'Satoshi Regular';
-    src: url('assets/Satoshi-Regular.woff2') format('woff2');
+    src: url('/assets/Satoshi-Regular.woff2') format('woff2');
     font-display:swap;
   }
 
   @font-face {
     font-family: 'Satoshi Italic';
-    src: url('assets/Satoshi-Italic.woff2') format('woff2');
+    src: url('/assets/Satoshi-Italic.woff2') format('woff2');
     font-display:swap;
   }
 
   @font-face {
     font-family: 'Satoshi Bold';
-    src: url('assets/Satoshi-Bold.woff2') format('woff2');
+    src: url('/assets/Satoshi-Bold.woff2') format('woff2');
     font-display:swap;
   }
 
   @font-face {
     font-family: 'Satoshi Bold Italic';
-    src: url('assets/Satoshi-BoldItalic.woff2') format('woff2');
+    src: url('/assets/Satoshi-BoldItalic.woff2') format('woff2');
     font-display:swap;
   }
 
   @font-face {
-    font-family: 'Satoshi Medium';
-    src: url('assets/Satoshi-Medium.woff2') format('woff2');
+    font-family: 'Satoshi Regular';
+    src: url('/assets/Satoshi-Regular.woff2') format('woff2');
     font-display:swap;
   }
   
 
 body {
   box-sizing: content-box;
-  font-family: 'Satoshi Medium';
+  font-family: 'Satoshi Regular';
   margin: 0 auto;
   line-height: 1.7;
   overflow-x: hidden;
