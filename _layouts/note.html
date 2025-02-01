@@ -6,6 +6,7 @@ layout: default
 <div class="note-wrap">
   <div class="note-content-wrap">
     <h1>{{ page.title }}</h1>
+   
     <div class="metadata-container">
       {% if page.title %}
       <div class="metadata-line">
@@ -31,9 +32,7 @@ layout: default
           <a class="item-tag" href="/tags/{{ tag | downcase }}" class="internal-link">{{ tag }}</a>
         {% endfor %}
       </div>
-      {% endif %}
-    </div>
-    
+      {% endif
     <p class="item-excerpt">{{ content }}</p>
     <hr>
 

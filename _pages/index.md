@@ -13,7 +13,7 @@ header_excerpt: A collection of finished pieces on various topics, and bullshit.
     {% if article.tags %}
       <div class="item-tag-wrap">
         {% for tag in article.tags %}
-          <a href="#" class="item-tag">{{ tag }}</a>
+          <a href="/tags/{{ tag | downcase }}" class="item-tag internal-link">{{ tag }}</a>
         {% endfor %}
       </div>
     {% endif %}
@@ -29,4 +29,3 @@ header_excerpt: A collection of finished pieces on various topics, and bullshit.
   </div>
 {% endfor %}
 </div>
-
