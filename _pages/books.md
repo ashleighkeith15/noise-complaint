@@ -34,4 +34,3 @@ permalink: /books/
       </div>
     {% endfor %}
   </div>
-</div>
