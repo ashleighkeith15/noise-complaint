@@ -3,6 +3,7 @@ title: Women, Race and Class
 date: 2025-01-26
 people: "[[Angela Y Davis]]"
 tags: [books]
+permalink: /people/women-race-and-class/
 ---
 
 Angela Y. Davis
