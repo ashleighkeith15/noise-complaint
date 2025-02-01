@@ -2,39 +2,39 @@
 layout: default
 ---
 
-<div class="metadata-container">
-  {% if page.title %}
-  <div class="metadata-line">
-    <span class="key">title</span>
-    <span class="colon">:</span>
-    <span class="value">{{ page.title }}</span>
-  </div>
-  {% endif %}
-  
-  {% if page.people %}
-  <div class="metadata-line">
-    <span class="key">people</span>
-    <span class="colon">:</span>
-    <span class="author-brackets">[[</span>
-    <a href="#" class="author-link">{{ page.people | remove: '[[' | remove: ']]' }}</a>
-    <span class="author-brackets">]]</span>
-  </div>
-  {% endif %}
-  
-  {% if page.tags %}
-  <div class="metadata-line">
-    <span class="key">tags</span>
-    <span class="colon">:</span>
-    <span class="brackets">[</span>
-    <span class="value">{{ page.tags | join: ", " }}</span>
-    <span class="brackets">]</span>
-  </div>
-  {% endif %}
-</div>
 
 <div class="note-wrap">
   <div class="note-content-wrap">
     <h1>{{ page.title }}</h1>
+    <div class="metadata-container">
+      {% if page.title %}
+      <div class="metadata-line">
+        <span class="key">title</span>
+        <span class="colon">:</span>
+        <span class="value">{{ page.title }}</span>
+      </div>
+      {% endif %}
+      
+      {% if page.people %}
+      <div class="metadata-line">
+        <span class="key">people</span>
+        <span class="colon">:</span>
+        <a href="{{ page.people | remove: '[[' | remove: ']]' | prepend: '/people/' | append: '.html' }}" class="people-link">
+          {{ page.people | remove: '[[' | remove: ']]' }}
+        </a>
+      </div>
+      {% endif %}
+      
+      {% if page.tags %}
+      <div class="metadata-line">
+        <span class="key">tags</span>
+        <span class="colon">:</span>
+        <span class="brackets">[</span>
+        <span class="value">{{ page.tags | join: ", " }}</span>
+        <span class="brackets">]</span>
+      </div>
+      {% endif %}
+    </div>
     <p class="item-excerpt">{{ content }}</p>
     <hr>
 
