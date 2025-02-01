@@ -8,11 +8,11 @@ header_excerpt: A collection of developing notes and ideas that are still taking
 
 <div class="filter-wrap">
   <div class="filter-container">
-    <a href="/fragments" class="filter-button active">All</a>
-    <a href="/tags/books" class="filter-button">Books</a>
-    <a href="/tags/concepts" class="filter-button">Concepts</a>
-    <a href="/tags/questions" class="filter-button">Questions</a>
-    <a href="/tags/events" class="filter-button">Events</a>
+    <a href="/fragments" class="filter-button active internal-link">All</a>
+    <a href="/tags/books" class="filter-button internal-link">Books</a>
+    <a href="/tags/concepts" class="filter-button internal-link">Concepts</a>
+    <a href="/tags/questions" class="filter-button internal-link">Questions</a>
+    <a href="/tags/events" class="filter-button internal-link">Events</a>
   </div>
 </div>
 
