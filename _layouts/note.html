@@ -26,12 +26,10 @@ layout: default
       {% endif %}
       
       {% if page.tags %}
-      <div class="metadata-line">
-        <span class="key">tags</span>
-        <span class="colon">:</span>
-        <span class="brackets">[</span>
-        <span class="value">{{ page.tags | join: ", " }}</span>
-        <span class="brackets">]</span>
+      <div class="metadata-line tags-container">
+        {% for tag in page.tags %}
+          <a class="item-tag" href="/tags/{{ tag }}">{{ tag }}</a>
+        {% endfor %}
       </div>
       {% endif %}
     </div>
