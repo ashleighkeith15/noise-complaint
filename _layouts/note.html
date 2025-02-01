@@ -28,7 +28,7 @@ layout: default
       {% if page.tags %}
       <div class="metadata-line tags-container">
         {% for tag in page.tags %}
-          <a class="item-tag" href="/tags/{{ tag }}">{{ tag }}</a>
+          <a class="item-tag" href="/tags/{{ tag | downcase }}" class="internal-link">{{ tag }}</a>
         {% endfor %}
       </div>
       {% endif %}
