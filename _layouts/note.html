@@ -40,31 +40,33 @@ layout: default
     {% include notes_graph.html %}
   </div>
 
-  <div class="note-mentions">
-    <div class="mentioned-contain">
-      <div class="mention-title">MENTIONED IN THIS NOTE</div>
-      {% if page.backlinks.size > 0 %}
-        {% for backlink in page.backlinks %}
-          <div class="mentioned-item">
-            <h2><a href="{{ site.baseurl }}{{ backlink.url }}" class="internal-link">{{ backlink.title }}</a></h2>
-            {% assign sentences = backlink.content | split: "." %}
-            {% for sentence in sentences %}
-              {% if sentence contains page.title or sentence contains page.title | downcase %}
-                <p class="mentioned-excerpt">
-                  {{ sentence | append: "." | strip_html | strip }}
-                </p>
-                {% break %}
-              {% endif %}
-            {% endfor %}
-          </div>
-        {% endfor %}
-      {% else %}
+
+</div>
+<div class="note-mentions">
+  <div class="mentioned-contain">
+    <div class="mention-title">MENTIONED IN THIS NOTE</div>
+    {% if page.backlinks.size > 0 %}
+      {% for backlink in page.backlinks %}
         <div class="mentioned-item">
-          <p>There are no notes mentioning this note.</p>
+          <h2><a href="{{ site.baseurl }}{{ backlink.url }}" class="internal-link">{{ backlink.title }}</a></h2>
+          {% assign sentences = backlink.content | split: "." %}
+          {% for sentence in sentences %}
+            {% if sentence contains page.title or sentence contains page.title | downcase %}
+              <p class="mentioned-excerpt">
+                {{ sentence | append: "." | strip_html | strip }}
+              </p>
+              {% break %}
+            {% endif %}
+          {% endfor %}
         </div>
-      {% endif %}
-    </div>
+      {% endfor %}
+    {% else %}
+      <div class="mentioned-item">
+        <p>There are no notes mentioning this note.</p>
+      </div>
+    {% endif %}
   </div>
+</div>
 </div>
 <footer>{% include footer.html %}</footer>
 <style>
