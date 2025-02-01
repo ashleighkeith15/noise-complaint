@@ -3,35 +3,39 @@ layout: default
 ---
 
 
-
 <div class="note-wrap">
   <div class="note-content-wrap">
     <h1>{{ page.title }}</h1>
     <p class="item-excerpt">{{ content }}</p>
-    <hr>
-
-    <p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
-    
-    {% include notes_graph.html %}
   </div>
   
-  {% if page.backlinks.size > 0 %}
   <div class="note-mentions">
     <div class="mentioned-contain">
       <div class="mention-title">MENTIONED IN THIS NOTE</div>
-      {% for backlink in page.backlinks %}
+      {% if page.backlinks.size > 0 %}
+        {% for backlink in page.backlinks %}
+          <div class="mentioned-item">
+            <h2><a href="{{ site.baseurl }}{{ backlink.url }}" class="internal-link">{{ backlink.title }}</a></h2>
+            {% assign sentences = backlink.content | split: "." %}
+            {% for sentence in sentences %}
+              {% if sentence contains page.title %}
+                <p>{{ sentence | append: "." | strip_html }}</p>
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+      {% else %}
         <div class="mentioned-item">
-          <h2><a href="{{ site.baseurl }}{{ backlink.url }}" class="internal-link">{{ backlink.title }}</a></h2>
-          {% assign sentences = backlink.content | split: "." %}
-          {% for sentence in sentences %}
-            {% if sentence contains page.title %}
-              <p>{{ sentence | append: "." | strip_html }}</p>
-              {% break %}
-            {% endif %}
-          {% endfor %}
+          <p>There are no notes mentioning this note.</p>
         </div>
-      {% endfor %}
+      {% endif %}
     </div>
   </div>
-  {% endif %}
 </div>
+
+<style>
+  .home_wrap {
+    display: none !important;
+  }
+</style>
