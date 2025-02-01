@@ -1,14 +1,13 @@
 ---
 layout: default
-title: Unfinished Threads
-header_title: Unfinished Threads
-header_excerpt: Please help. A collection of finished pieces on various topics, and bullshit.
+title: Noise Complaint
+header_title: Noise Complaint
+header_excerpt: A collection of finished pieces on various topics, and bullshit.
 ---
 
-
 <div class="item-wrap">
-{% assign non_article_files = site.notes | where_exp: "note", "note.path contains 'articles' | not" %}
-{% for note in non_article_files %}
+{% assign idea_files = site.notes | where_exp: "note", "note.path contains 'ideas'" %}
+{% for note in idea_files %}
   <div class="item-contain">
     {% if note.tags %}
       <div class="item-tag-wrap">
