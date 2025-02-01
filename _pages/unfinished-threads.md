@@ -3,8 +3,9 @@ layout: default
 title: Noise Complaint
 header_title: Noise Complaint
 header_excerpt: A collection of finished pieces on various topics, and bullshit.
-permalink: /unfinished-threads
+permalink: /unfinished-threads/
 ---
+
 
 <div class="item-wrap">
 {% assign idea_files = site.notes | where_exp: "note", "note.path contains 'ideas'" %}
