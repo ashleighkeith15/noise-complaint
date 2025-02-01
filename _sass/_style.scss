@@ -346,7 +346,6 @@ border-radius: 0px;
 
 
 .footer {
-  position: fixed;
   inset: auto 0% 0%;
 background-color: #f7f4ee;
 z-index: 5;
@@ -571,6 +570,11 @@ border-bottom: 1px solid #ccc;
 
 .item-title {
   margin-top: 0;
+  a {
+    font-family: 'Redaction Regular';
+    color: black !important;
+    text-decoration: none;
+  }
 }
 
 .item-excerpt {
@@ -657,6 +661,13 @@ border-bottom: 1px solid #ccc;
   text-align: center;
   text-transform: uppercase;
   padding: 7px;
+  color: #FFF;
+font-family: 'Satoshi Bold';
+font-size: 0.75rem;
+
+line-height: normal;
+letter-spacing: 0.06rem;
+text-transform: uppercase;
 }
 
 .mentioned-item {
@@ -691,4 +702,6 @@ font-size: 1rem;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
+text-transform: uppercase;
+text-decoration: none;
 }

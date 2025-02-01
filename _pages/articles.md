@@ -19,9 +19,9 @@ header_excerpt: A collection of finished pieces on various topics, from philosop
     
     <div class="item-content">
       <div class="title-wrap">
-        <h1 class="item-title">
+        <h2 class="item-title">
           <a href="{{ site.baseurl }}{{ article.url }}" class="internal-link">{{ article.title }}</a>
-        </h1>
+        </h2>
       </div>
       <p class="item-excerpt">{{ article.excerpt | strip_html | truncatewords: 30 }}</p>
     </div>

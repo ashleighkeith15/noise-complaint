@@ -21,9 +21,9 @@ permalink: /unfinished-threads/
     
     <div class="item-content">
       <div class="title-wrap">
-        <h1 class="item-title">
+        <h2 class="item-title">
           <a href="{{ site.baseurl }}{{ note.url }}" class="internal-link">{{ note.title }}</a>
-        </h1>
+        </h2>
       </div>
       <p class="item-excerpt">{{ note.excerpt | strip_html | truncatewords: 30 }}</p>
     </div>
