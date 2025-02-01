@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
-  <body>
-    <nav>{% include nav.html %}</nav>
-    <div class="wrapper">
-      <main>{{ content }}</main>
-      <footer>{% include footer.html %}</footer>
-    </div>
+{% include head.html %}
 
-    {% include link-previews.html wrapperQuerySelector="content" %}
-  </body>
+<body>
+  <div class="page_wrap">
+    <main id="main" class="page_main">
+  <nav>{% include nav.html %}</nav>
+
+  <div class="home_wrap">
+    <div class="home-title-wrap">
+      <h1>{{ page.header_title | default: page.title }}</h1>
+      <p class="item-excerpt">{{ page.header_excerpt }}</p>
+    </div>
+  </div>
+  <content>
+    {{ content }}
+  
+  </content>
+
+  <footer>{% include footer.html %}</footer>
+
+</main>
+</div>
+</body>
+
 </html>
