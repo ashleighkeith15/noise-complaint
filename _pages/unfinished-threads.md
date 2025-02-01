@@ -1,14 +1,12 @@
 ---
 layout: default
-title: Noise Complaint
-id: home
-permalink: /
-header_title: Noise Complaint
-header_excerpt: A collection of finished pieces on various topics, and bullshit.
+title: Unfinished Threads
+header_title: Unfinished Threads
+header_excerpt: Please help. A collection of finished pieces on various topics, and bullshit.
 ---
 
 <div class="item-wrap">
-{% assign non_article_files = site.notes | where_exp: "note", "note.path contains '/articles/' != true" %}
+{% assign non_article_files = site.notes | where_exp: "note", "note.path contains '/articles/' == false" %}
 {% for note in non_article_files %}
   <div class="item-contain">
     {% if note.tags %}
