@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "bundler", "~> 2.3.3"
 
-ruby '3.1.0'  # Keep your Ruby version
+ruby '3.2.6'  # Updated to match Netlify's version
 
 gem "jekyll", "~> 4.3"
 gem "webrick", "~> 1.9"
