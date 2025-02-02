@@ -1,6 +1,12 @@
+cat > netlify.toml << 'EOL'
 [build]
-command = "jekyll build"
+command = "bundle exec jekyll build"
 publish = "_site/"
 
 [build.environment]
 JEKYLL_ENV = "production"
+RUBY_VERSION = "3.2.6"
+
+[context.production]
+command = "bundle exec jekyll build"
+EOL
