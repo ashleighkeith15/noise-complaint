@@ -7,26 +7,18 @@ permalink: /people/
 ---
 
 
-<div class="item-wrap">
-{% assign people_files = site.notes | where_exp: "note", "note.path contains 'people'" %}
-{% for note in people_files %}
-  <div class="item-contain">
-    {% if note.tags %}
-      <div class="item-tag-wrap">
-        {% for tag in note.tags %}
-          <a href="#" class="item-tag">{{ tag }}</a>
-        {% endfor %}
+  <div class="books_contain">
+    {% assign people_files = site.notes | where_exp: "note", "note.path contains '/people/'" %}
+    {% for person in people_files %}
+      <div class="book-item">
+        <a href="{{ site.baseurl }}{{ person.url }}" class="internal-link">
+          {% if person.profile_image %}
+            <img src="{{ person.profile_image }}" loading="lazy" class="book_image" alt="{{ person.title }} profile image">
+          {% else %}
+            <img src="/placeholder.jpg" loading="lazy" class="book_image" alt="Placeholder profile image">
+          {% endif %}
+        </a>
+        <h2><a href="{{ site.baseurl }}{{ person.url }}" class="item-title internal-link">{{ person.title }}</a></h2>
       </div>
-    {% endif %}
-    
-    <div class="item-content">
-      <div class="title-wrap">
-        <h2 class="item-title">
-          <a href="{{ site.baseurl }}{{ note.url }}" class="internal-link">{{ note.title }}</a>
-        </h2>
-      </div>
-      <p class="item-excerpt">{{ note.excerpt | strip_html | truncatewords: 30 }}</p>
-    </div>
+    {% endfor %}
   </div>
-{% endfor %}
-</div>
