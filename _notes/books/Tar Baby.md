@@ -1,5 +1,5 @@
 ---
-title: Tar. Baby
+title: Tar Baby
 date: 2024-01-20
 people: Toni Morrison
 tags:
