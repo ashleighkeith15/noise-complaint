@@ -1,6 +1,6 @@
 ---
 title: 
-date: ""
 tags:
   - events
+permalink:
 ---

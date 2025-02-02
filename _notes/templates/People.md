@@ -1,8 +1,7 @@
 ---
 title: 
-date: ""
 tags:
   - people
-permalink: /people/
+permalink: 
 profile_image:
 ---
