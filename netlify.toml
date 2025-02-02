@@ -1,4 +1,4 @@
-echo '[build]
+[build]
 command = "bundle exec jekyll build"
 publish = "_site/"
 
@@ -7,4 +7,4 @@ JEKYLL_ENV = "production"
 RUBY_VERSION = "3.2.6"
 
 [context.production]
-command = "bundle exec jekyll build"' > netlify.toml
+command = "bundle exec jekyll build"
