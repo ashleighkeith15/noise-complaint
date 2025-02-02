@@ -51,7 +51,7 @@ layout: default
             <h2><a href="{{ site.baseurl }}{{ backlink.url }}" class="internal-link">{{ backlink.title }}</a></h2>
             {% assign sentences = backlink.content | split: "." %}
             {% for sentence in sentences %}
-              {% if sentence contains page.title or sentence contains page.title | downcase %}
+            {% if sentence contains page.title or sentence contains page.title.downcase %}
                 <p class="mentioned-excerpt">
                   {{ sentence | append: "." | strip_html | strip }}
                 </p>
