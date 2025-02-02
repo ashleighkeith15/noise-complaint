@@ -1,6 +1,6 @@
 ---
 title: Women, Race and Class
-date: ""
+date: 2024-09-14
 people: "[[Angela Y Davis]]"
 tags:
   - books
