@@ -5,4 +5,4 @@ tags: [people]
 permalink: "/people/angela-y-davis/"
 profile_image: "/assets/image.jpg"
 ---
-Can this bee seen?
+Can this bee seen???
