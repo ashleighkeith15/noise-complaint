@@ -3,6 +3,6 @@ title:
 people: 
 tags:
   - books
-permalink: /books/
+permalink: 
 cover_image:
 ---
